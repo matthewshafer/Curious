@@ -13,7 +13,6 @@ require_once("./libs/PluginLoader.php");
 $pluginStore = new PluginStore();
 $pluginLoader = new PluginLoader($pluginStore);
 $pluginLoader->loadPlugins("plugins/");
-print_r($pluginStore->getPluginArray());
 
 require_once("./libs/XhprofLoader.php");
 require_once("./libs/XhprofDataStore.php");
