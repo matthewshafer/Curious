@@ -22,6 +22,7 @@ $dataStore = new XhprofDataStore();
 $loader = new XhprofLoader();
 $directoryAdder = new DirectoryAdd($dataStore, $loader);
 $directoryAdder->parseDir("./first");
+$directoryAdder->parseDir("./second");
 
 
 
