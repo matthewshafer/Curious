@@ -6,6 +6,13 @@ class XhprofDataStore
 	private $currRun = 0;
 	private $maxRun;
 
+	/**
+	 * __construct function.
+	 * 
+	 * @access public
+	 * @param int $diffRunAmount. (default: 2)
+	 * @return void
+	 */
 	public function __construct($diffRunAmount = 2)
 	{
 		$this->maxRun = $diffRunAmount;
@@ -16,6 +23,14 @@ class XhprofDataStore
 		}
 	}
 	
+	/**
+	 * addLoader function.
+	 * 
+	 * @access public
+	 * @param mixed $loader
+	 * @param mixed $id
+	 * @return void
+	 */
 	public function addLoader($loader, $id)
 	{
 		print_r($this->dataArr);
