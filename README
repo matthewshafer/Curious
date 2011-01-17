@@ -1,0 +1,7 @@
+This is just a little tool i've created for myself where I can take a bunch of xhprof runs 
+and pass them through some plugins.  What I mean by plugins are ones that can parse the data 
+and then give me some output.
+
+My goal is to be able to take a bunch of runs and find the min/max/average/std deviation/etc. 
+This would allow me to see if my optimizations of my web applications could make a difference 
+in execution time.
