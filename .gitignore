@@ -1,6 +1,6 @@
 # ignore xhprof files in first and second dir's
-first/**/*
-second/**/*
+first/
+second/
 
 
 .DS_Store?
