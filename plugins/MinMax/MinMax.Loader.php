@@ -1,5 +1,9 @@
 <?php
 
-echo "this is the MinMax loader\n";
+require_once("MinMax.php");
+
+$minMax = new MinMax();
+
+$this->addPlugin($minMax, $minMax->pluginType());
 
 ?>

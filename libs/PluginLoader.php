@@ -13,6 +13,7 @@ class PluginLoader
 	
 	public function loadPlugins($dirPath)
 	{
+		$this->loadAbstract();
 		if(is_dir($dirPath) && $dir = opendir($dirPath))
 		{
 			while($file = readdir($dir))
@@ -32,6 +33,11 @@ class PluginLoader
 	public function addPlugin($plugin, $type)
 	{
 		$this->pluginStore->addPlugin($plugin, $type);
+	}
+	
+	private function loadAbstract()
+	{
+		require_once("abstract_classes/BasicPlugin.php");
 	}
 
 
