@@ -26,12 +26,16 @@ class PluginStore
 	
 	public function getNextPlugin()
 	{
-		$return = null;
+		$ret = null;
 		
 		if($this->iterPosition < $this->pluginCount)
 		{
-			$return = $this->pluginArray[$this->iterPosition];
+			$ret = $this->pluginArray[$this->iterPosition];
 		}
+		
+		$this->iterPosition++;
+		
+		return $ret;
 	}
 	
 	// just for testing and whatnot.

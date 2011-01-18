@@ -28,10 +28,10 @@ abstract class BasicPlugin
 	 * 
 	 * @access public
 	 * @abstract
-	 * @param Array $data
+	 * @param XhprofDataAccess $data
 	 * @return void
 	 */
-	abstract function acceptXhprofData($data);
+	abstract function acceptXhprofData(XhprofDataAccess $data);
 	
 	/**
 	 * processData function.

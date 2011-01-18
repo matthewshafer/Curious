@@ -10,12 +10,14 @@ require_once($xhprofLibDir);
 
 require_once("./libs/PluginStore.php");
 require_once("./libs/PluginLoader.php");
+require_once("./libs/PluginRunner.php");
 $pluginStore = new PluginStore();
 $pluginLoader = new PluginLoader($pluginStore);
 $pluginLoader->loadPlugins("plugins/");
 
 require_once("./libs/XhprofLoader.php");
 require_once("./libs/XhprofDataStore.php");
+require_once("./libs/XhprofDataAccess.php");
 require_once("./libs/DirectoryAdd.php");
 
 $dataStore = new XhprofDataStore();
@@ -23,6 +25,11 @@ $loader = new XhprofLoader();
 $directoryAdder = new DirectoryAdd($dataStore, $loader);
 $directoryAdder->parseDir("./first");
 $directoryAdder->parseDir("./second");
+
+$dataAccess = new XhprofDataAccess($dataStore);
+$pluginRunner = new PluginRunner($pluginStore, $dataAccess);
+
+$pluginRunner->runPlugins();
 
 
 

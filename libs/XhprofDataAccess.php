@@ -5,14 +5,14 @@ class XhprofDataAccess
 
 	private $xhprofData;
 	private $batches;
-	private $currentBatch = 0;
+	private $currentBatch = -1;
 	private $currentRun = -1;
 	private $currentTotalRuns = 0;
 	
 	
-	public function __construct($data)
+	public function __construct(XhprofDataStore $data)
 	{
-		$this->xhprofData = $data;
+		$this->xhprofData = $data->getDataArray();
 		$this->batches = count($this->xhprofData);
 	}
 	

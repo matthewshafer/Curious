@@ -33,7 +33,7 @@ class XhprofDataStore
 	 */
 	public function addLoader($loader, $id)
 	{
-		print_r($this->dataArr);
+		//print_r($this->dataArr);
 		$tmpArr = array();
 		$tmpArr["overall"] = $loader->getOverall();
 		$tmpArr["totals"] = $loader->getTotals();
@@ -42,7 +42,12 @@ class XhprofDataStore
 		
 		array_push($this->dataArr[$id], $tmpArr);
 		
-		print_r($this->dataArr);
+		//print_r($this->dataArr);
+	}
+	
+	public function getDataArray()
+	{
+		return $this->dataArr;
 	}
 
 
