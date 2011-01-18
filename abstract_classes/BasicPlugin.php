@@ -8,6 +8,12 @@
  */
 abstract class BasicPlugin
 {
+	private $difference;
+	
+	public function __construct()
+	{
+		$this->difference = new WhatsTheDifference();
+	}
 	/**
 	 * pluginName function.
 	 * 

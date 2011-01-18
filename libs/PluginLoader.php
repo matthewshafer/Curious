@@ -37,6 +37,7 @@ class PluginLoader
 	
 	private function loadAbstract()
 	{
+		require_once("libs/WhatsTheDifference.php");
 		require_once("abstract_classes/BasicPlugin.php");
 	}
 

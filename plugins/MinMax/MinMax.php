@@ -5,11 +5,6 @@ class MinMax extends BasicPlugin
 
 	private $xhprofData;
 	private $outputData;
-
-	public function __construct()
-	{
-		echo "test\n";
-	}
 	
 	public function pluginName()
 	{
