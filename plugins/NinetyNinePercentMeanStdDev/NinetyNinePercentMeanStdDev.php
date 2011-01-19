@@ -1,6 +1,6 @@
 <?php
 
-class MeanStdDev extends BasicPlugin
+class NinetyNinePercentMeanStdDev extends BasicPlugin
 {
 	private $xhprofDataAccess;
 	private $outputData = "";
