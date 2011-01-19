@@ -19,7 +19,6 @@ class MinMax extends BasicPlugin
 	public function processData()
 	{
 		$runArr = array();
-		$j = 0;
 		$i = 1;
 		
 		while($this->xhprofDataAccess->nextBatch())
@@ -28,7 +27,6 @@ class MinMax extends BasicPlugin
 			{
 				$tmp = $this->xhprofDataAccess->getCurrentRunOverall();
 				array_push($runArr, $tmp["cpu"]);
-				$j++;
 			}
 			
 			$this->outputData = sprintf("%sRun %d had a min cpu time of %d and a max cpu time of %d\n", $this->outputData, $i, min($runArr), max($runArr));

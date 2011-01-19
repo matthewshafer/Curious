@@ -74,6 +74,13 @@ class XhprofDataAccess
 		
 		return $ret;
 	}
+	
+	public function resetPositions()
+	{
+		$this->currentBatch = -1;
+		$this->currentRun = -1;
+		$this->currentTotalRuns = 0;
+	}
 
 }
 ?>

@@ -32,6 +32,7 @@ class PluginRunner
 		$plugin->acceptXhprofData($this->xhprofDataAccess);
 		$plugin->processData();
 		printf("%s\n\n", $plugin->getOutput());
+		$this->xhprofDataAccess->resetPositions();
 	}
 }
 
