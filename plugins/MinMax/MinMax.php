@@ -26,11 +26,6 @@ class MinMax extends BasicPlugin
 			while($this->xhprofDataAccess->haveNextRun())
 			{
 				$tmp = $this->xhprofDataAccess->getCurrentRunOverall();
-				
-				if($tmp["cpu"] == 0)
-				{
-					print_r($tmp);
-				}
 				array_push($runArr, $tmp["cpu"]);
 			}
 			
