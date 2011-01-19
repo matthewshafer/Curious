@@ -34,7 +34,7 @@ class DirectoryAdd
 		{
 			while(($file = readdir($dir)) !== false)
 			{
-				if($file != "." && $file != "..")
+				if($file != "." && $file != ".." && $file != ".DS_Store")
 				{
 					$this->loader->loadXhprofFile($dirPath . "/" . $file);
 					
